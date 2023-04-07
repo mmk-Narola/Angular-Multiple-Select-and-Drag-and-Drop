@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="text-center mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div style="width: 50%">
+          <h3>MultiSelect-Checkbox</h3>
+          <form [formGroup]="dropDownForm">
+            <ng-multiselect-dropdown
+              [settings]="dropdownSetting"
+              [data]="dropdownList"
+              formControlName="myItems"
+              [placeholder]="'Select Your Item'"
+              (onSelect)="onItemSelect($event)"
+              (onSelectAll)="onSelectAll($event)"
+              (onDeSelect)="onItemDeSelect($event)"
+              (onDeSelectAll)="onUnSelectAll()"
+            >
+            </ng-multiselect-dropdown>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
